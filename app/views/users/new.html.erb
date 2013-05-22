@@ -1,23 +1,22 @@
 <!-- start content -->
 <div data-role="content" data-inset="true">
+	<%= form_for(@user) do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+	<%= f.label :password_confirmation, "Confirmation" %>
+	<%= f.password_field :password_confirmation %>
+	<%= f.submit "Sign Up", class: "button" %>
+	<% end %>
 
+	<!-- <input id="Submit1" type="submit" value="Sign Up" data-role="button" data-inline="true" data-theme="b" /> -->
 	<form action="/FormActions/login.ashx" method="POST">
 		<fieldset>
 
 			<asp:Literal runat="server" ID="litMessage"></asp:Literal>
-
-			<%= form_for(@user) do |f| %>
-			<%= f.label :name %>
-			<%= f.text_field :name %>
-			<%= f.label :email %>
-			<%= f.text_field :email %>
-			<%= f.label :password %>
-			<%= f.password_field :password %>
-			<%= f.label :password_confirmation, "Confirmation" %>
-			<%= f.password_field :password_confirmation %>
-			<% end %>
-
-			<input id="Submit1" type="submit" value="Sign Up" data-role="button" data-inline="true" data-theme="b" />
 
 			<hr />
 			Don't have a login? <a href="register.aspx">Sign Up</a>
