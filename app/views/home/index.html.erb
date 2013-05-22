@@ -1,15 +1,21 @@
 <div data-role="header">
-  <h1>Home</h1>
-  <%= link_to 'Sign out', signout_path, "class" => "ui-btn-right" %>
+	<h1>Home</h1>
+	<% if signed_in? %>
+	    <%= link_to 'Sign out', signout_path, method: "delete", "class" => "ui-btn-right" %>
+	<% else %>
+	<% end %>
 </div>
 
 <div data-role="content">
-  <ul data-role="listview">
-    <li>
-      <%= link_to 'Sign up', signup_path, "data-icon" => "gear" %>
-    </li>
-    <li>
-      <%= link_to 'Sign in', signin_path, "data-icon" => "gear" %>
-    </li>
-  </ul>
+	<ul data-role="listview">
+		<% if signed_in? %>		
+		<% else %>
+		<li>
+			<%= link_to 'Sign up', signup_path, "data-icon" => "gear" %>
+		</li>
+		<li>
+			<%= link_to 'Sign in', signin_path, "data-icon" => "gear" %>
+		</li>
+		<% end %>
+	</ul>
 </div>
