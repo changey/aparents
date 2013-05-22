@@ -8,7 +8,10 @@
 
 <div data-role="content">
 	<ul data-role="listview">
-		<% if signed_in? %>		
+		<% if signed_in? %>	
+		<li>
+			<%= link_to 'Market', signup_path, "data-icon" => "gear" %>
+		</li>
 		<% else %>
 		<li>
 			<%= link_to 'Sign up', signup_path, "data-icon" => "gear" %>

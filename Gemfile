@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.11'
 gem 'bcrypt-ruby', '3.0.1'
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -15,6 +16,8 @@ end
 group :production do
   gem 'pg'
 end
+
+gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
