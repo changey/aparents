@@ -12,7 +12,8 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:success] = "Welcome to the Netwoek Stickies App!"
-      redirect_to @user
+      # redirect_to @user
+      redirect_to root_path
     else
       render 'new'
     end
