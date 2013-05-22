@@ -9,19 +9,8 @@
 	<%= f.password_field :password %>
 	<%= f.label :password_confirmation, "Confirmation" %>
 	<%= f.password_field :password_confirmation %>
-	<%= f.submit "Sign Up", class: "button" %>
+	<%= f.submit "Sign Up", "data-role" => "button", "data-inline" => "true", "data-theme" => "b" %>
 	<% end %>
-
-	<!-- <input id="Submit1" type="submit" value="Sign Up" data-role="button" data-inline="true" data-theme="b" /> -->
-	<form action="/FormActions/login.ashx" method="POST">
-		<fieldset>
-
-			<asp:Literal runat="server" ID="litMessage"></asp:Literal>
-
-			<hr />
-			Don't have a login? <a href="register.aspx">Sign Up</a>
-		</fieldset>
-	</form>
 
 </div>
 <!-- end content -->
