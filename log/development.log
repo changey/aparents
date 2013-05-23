@@ -8947,3 +8947,1814 @@ Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.2ms)
 
 Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-22 23:41:46 -0400
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 08:36:05 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'msY7MEb6Tly5zxk6y4tq0w' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 08:36:05 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 08:36:06 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.8ms)[0m  SELECT "items".* FROM "items" 
+  Rendered items/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 08:36:08 -0400
+Processing by ItemsController#map as HTML
+  Rendered items/map.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 08:36:10 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'msY7MEb6Tly5zxk6y4tq0w' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 08:36:10 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 08:38:00 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'msY7MEb6Tly5zxk6y4tq0w' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 08:38:00 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 08:38:01 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered items/map2.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 08:38:01 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.7ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "image" varchar(255), "price" decimal, "bought" integer DEFAULT 0, "status" integer, "lat" decimal, "lng" decimal, "owner_id" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar(255), "remember_token" varchar(255)) 
+  [1m[36m (0.8ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130523001314')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101024022957')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130522195718')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130522201714')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130522202948')[0m
+  [1m[35m (3.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePosts (20101024022957)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101024022957')[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to CreateUsers (20130522195718)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130522195718')[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20130522201714)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130522201714')[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to AddRememberTokenToUsers (20130522202948)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "remember_token" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130522202948')
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateItems (20130523001314)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "image" varchar(255), "price" decimal, "bought" integer DEFAULT 0, "status" integer, "longitude" decimal, "latitude" decimal, "owner_id" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130523001314')
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 08:38:58 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'msY7MEb6Tly5zxk6y4tq0w' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'msY7MEb6Tly5zxk6y4tq0w' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 08:38:58 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2013-05-23 08:39:00 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 14ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-05-23 08:39:04 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "user"=>{"name"=>"asdf", "email"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (8.9ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "remember_token", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Thu, 23 May 2013 12:39:04 UTC +00:00], ["email", "a"], ["name", "asdf"], ["password_digest", "$2a$10$orHuk1hwm9wSvGNqMWSHjer1bfFgU3YT0YqWmB1ZCMC3eB0H5XRTi"], ["remember_token", "9V_Vp5EJhpF2sunn9uHNNw"], ["updated_at", Thu, 23 May 2013 12:39:04 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 08:39:04 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'msY7MEb6Tly5zxk6y4tq0w' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'msY7MEb6Tly5zxk6y4tq0w' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2013-05-23 08:39:05 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-05-23 08:39:08 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "session"=>{"email"=>"a", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'a' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 69ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 08:39:08 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '9V_Vp5EJhpF2sunn9uHNNw' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 08:39:11 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" 
+  Rendered items/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 08:39:28 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (9.9ms)
+  Rendered items/new.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `lat' for #<Item:0x007faeb9cb94f8>):
+    6: 	<%= f.text_area :description %>
+    7: 	<p>Price (USD)</p>
+    8: 	<%= f.text_field :price %>
+    9: 	<%= f.text_field :lat, :id => "lat" %>
+    10: 	<%= f.text_field :lng, :id => "lng" %>
+    11: 	
+    12: 	<%= f.submit "Create", "data-role" => "button", "data-inline" => "true", "data-theme" => "b" %>
+  app/views/items/_form.html.erb:9:in `block in _app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/_form.html.erb:2:in `_app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___81329237929514480_70194208726240'
+  app/controllers/items_controller.rb:29:in `new'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (14.7ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.1ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 08:39:29 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.2ms)
+  Rendered items/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `lat' for #<Item:0x007faeb9c6e9d0>):
+    6: 	<%= f.text_area :description %>
+    7: 	<p>Price (USD)</p>
+    8: 	<%= f.text_field :price %>
+    9: 	<%= f.text_field :lat, :id => "lat" %>
+    10: 	<%= f.text_field :lng, :id => "lng" %>
+    11: 	
+    12: 	<%= f.submit "Create", "data-role" => "button", "data-inline" => "true", "data-theme" => "b" %>
+  app/views/items/_form.html.erb:9:in `block in _app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/_form.html.erb:2:in `_app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___81329237929514480_70194208726240'
+  app/controllers/items_controller.rb:29:in `new'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 08:39:31 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.9ms)
+  Rendered items/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `lat' for #<Item:0x007faeb9cb68c0>):
+    6: 	<%= f.text_area :description %>
+    7: 	<p>Price (USD)</p>
+    8: 	<%= f.text_field :price %>
+    9: 	<%= f.text_field :lat, :id => "lat" %>
+    10: 	<%= f.text_field :lng, :id => "lng" %>
+    11: 	
+    12: 	<%= f.submit "Create", "data-role" => "button", "data-inline" => "true", "data-theme" => "b" %>
+  app/views/items/_form.html.erb:9:in `block in _app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/_form.html.erb:2:in `_app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___81329237929514480_70194208726240'
+  app/controllers/items_controller.rb:29:in `new'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 08:39:40 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.1ms)
+  Rendered items/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `lat' for #<Item:0x007faeb9aba058>):
+    6: 	<%= f.text_area :description %>
+    7: 	<p>Price (USD)</p>
+    8: 	<%= f.text_field :price %>
+    9: 	<%= f.text_field :lat, :id => "lat" %>
+    10: 	<%= f.text_field :lng, :id => "lng" %>
+    11: 	
+    12: 	<%= f.submit "Create", "data-role" => "button", "data-inline" => "true", "data-theme" => "b" %>
+  app/views/items/_form.html.erb:9:in `block in _app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/_form.html.erb:2:in `_app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___81329237929514480_70194208726240'
+  app/controllers/items_controller.rb:29:in `new'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 08:40:01 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (3.3ms)
+  Rendered items/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined method `lat' for #<Item:0x007faeb9cabb00>):
+    6: 	<%= f.text_area :description %>
+    7: 	<p>Price (USD)</p>
+    8: 	<%= f.text_field :price %>
+    9: 	<%= f.text_field :lat, :id => "lat" %>
+    10: 	<%= f.text_field :lng, :id => "lng" %>
+    11: 	
+    12: 	<%= f.submit "Create", "data-role" => "button", "data-inline" => "true", "data-theme" => "b" %>
+  app/views/items/_form.html.erb:9:in `block in _app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/_form.html.erb:2:in `_app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___81329237929514480_70194208726240'
+  app/controllers/items_controller.rb:29:in `new'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (14.0ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 08:40:05 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.0ms)
+  Rendered items/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `lat' for #<Item:0x007faeb9effe60>):
+    6: 	<%= f.text_area :description %>
+    7: 	<p>Price (USD)</p>
+    8: 	<%= f.text_field :price %>
+    9: 	<%= f.text_field :lat, :id => "lat" %>
+    10: 	<%= f.text_field :lng, :id => "lng" %>
+    11: 	
+    12: 	<%= f.submit "Create", "data-role" => "button", "data-inline" => "true", "data-theme" => "b" %>
+  app/views/items/_form.html.erb:9:in `block in _app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/_form.html.erb:2:in `_app_views_items__form_html_erb__4270489366641517981_70194208330600'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___81329237929514480_70194208726240'
+  app/controllers/items_controller.rb:29:in `new'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 08:40:26 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.5ms)
+  Rendered items/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 08:40:26 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 08:40:31 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asdf", "description"=>"asdf", "price"=>"2.44", "latitude"=>"42.357869099999995", "longitude"=>"-71.09328219999999"}, "commit"=>"Create"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "items" ("bought", "created_at", "description", "image", "latitude", "longitude", "name", "owner_id", "price", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bought", 0], ["created_at", Thu, 23 May 2013 12:40:31 UTC +00:00], ["description", "asdf"], ["image", nil], ["latitude", #<BigDecimal:7faeb9bc7c48,'0.4235786909 9999995E2',27(27)>], ["longitude", #<BigDecimal:7faeb9bc7ce8,'-0.7109328219 999999E2',27(27)>], ["name", "asdf"], ["owner_id", nil], ["price", #<BigDecimal:7faeb9bc7dd8,'0.244E1',18(18)>], ["status", nil], ["updated_at", Thu, 23 May 2013 12:40:31 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-05-23 08:40:31 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered items/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 08:40:35 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-05-23 08:40:47 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered items/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 08:40:50 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-05-23 08:40:50 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered items/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 08:40:52 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-05-23 08:46:26 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered items/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 08:46:38 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 08:46:38 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 08:48:01 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '9V_Vp5EJhpF2sunn9uHNNw' LIMIT 1
+  Rendered home/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 08:48:01 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 08:48:03 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" 
+Completed 500 Internal Server Error in 18ms
+
+NoMethodError (undefined method `gmaps4rails_options' for #<Item:0x007faeb9caca28>):
+  app/controllers/items_controller.rb:6:in `index'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 08:48:05 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.5ms)
+  Rendered items/map2.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 08:48:05 -0400
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:25:02 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.4ms)
+  Rendered items/map2.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 7ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:25:02 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2013-05-23 09:26:32 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" 
+Completed 500 Internal Server Error in 15ms
+
+NoMethodError (undefined method `gmaps4rails_options' for #<Item:0x007faeb9a45ac8>):
+  app/controllers/items_controller.rb:6:in `index'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.1ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:26:34 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.2ms)
+  Rendered items/map2.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:26:34 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:26:34 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.6ms)
+  Rendered items/map2.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:26:34 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 09:27:44 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '9V_Vp5EJhpF2sunn9uHNNw' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:27:44 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:27:45 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered items/map2.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:27:45 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:29:45 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.1ms)
+  Rendered items/map2.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:29:45 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:32:59 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.9ms)
+  Rendered items/map2.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:32:59 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:33:01 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered items/map2.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:33:01 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:33:10 -0400
+Connecting to database specified by database.yml
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.2ms)
+  Rendered items/map2.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:33:10 -0400
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:33:53 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered items/map2.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:33:53 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:34:39 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.1ms)
+  Rendered items/map2.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:34:39 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:34:43 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered items/map2.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:34:43 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:37:16 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered items/map2.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:37:16 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:37:48 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered items/map2.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:37:48 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:38:03 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered items/map2.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:38:03 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-23 09:38:10 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '9V_Vp5EJhpF2sunn9uHNNw' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (72.8ms)
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:38:10 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 09:38:12 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:38:13 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (7.8ms)
+  Rendered items/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:38:16 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (14.1ms)
+  Rendered items/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 34ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:38:16 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:38:23 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asdf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357884999999996", "longitude"=>"-71.0932871"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `gmaps' for #<Item:0x007fe30aad61b0>):
+  app/controllers/items_controller.rb:51:in `block in create'
+  app/controllers/items_controller.rb:50:in `create'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:38:52 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.8ms)
+  Rendered items/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 19ms (Views: 6.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:38:53 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:38:58 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asdf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.3579025", "longitude"=>"-71.093311"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `gmaps' for #<Item:0x007fe30adf0e68>):
+  app/controllers/items_controller.rb:51:in `block in create'
+  app/controllers/items_controller.rb:50:in `create'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "image" varchar(255), "price" decimal, "bought" integer DEFAULT 0, "status" integer, "longitude" decimal, "latitude" decimal, "owner_id" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar(255), "remember_token" varchar(255)) 
+  [1m[36m (0.7ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130523001314')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101024022957')
+  [1m[36m (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130522195718')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130522201714')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130522202948')[0m
+  [1m[35m (3.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (4.7ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePosts (20101024022957)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101024022957')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateUsers (20130522195718)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130522195718')[0m
+  [1m[35m (2.1ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20130522201714)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130522201714')[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to AddRememberTokenToUsers (20130522202948)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "remember_token" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130522202948')
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateItems (20130523001314)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "image" varchar(255), "price" decimal, "bought" integer DEFAULT 0, "status" integer, "longitude" decimal, "latitude" decimal, "owner_id" varchar(255), "gmaps" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130523001314')
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:41:17 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.2ms)
+  Rendered items/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 18ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:41:17 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:41:23 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asdf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.35784700000001", "longitude"=>"-71.0932969"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `gmaps4rails_address' for #<Item:0x007fe30a9bb820>):
+  app/controllers/items_controller.rb:51:in `block in create'
+  app/controllers/items_controller.rb:50:in `create'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.9ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "image" varchar(255), "price" decimal, "bought" integer DEFAULT 0, "status" integer, "longitude" decimal, "latitude" decimal, "owner_id" varchar(255), "gmaps" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar(255), "remember_token" varchar(255)) 
+  [1m[36m (0.7ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130523001314')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101024022957')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130522195718')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130522201714')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130522202948')[0m
+  [1m[35m (2.7ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePosts (20101024022957)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101024022957')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateUsers (20130522195718)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130522195718')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20130522201714)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130522201714')[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to AddRememberTokenToUsers (20130522202948)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "remember_token" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130522202948')
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateItems (20130523001314)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "image" varchar(255), "price" decimal, "bought" integer DEFAULT 0, "status" integer, "longitude" decimal, "latitude" decimal, "owner_id" varchar(255), "gmaps" varchar(255), "address" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130523001314')
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:42:21 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.3ms)
+  Rendered items/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 36ms (Views: 6.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:42:21 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:42:26 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asdf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.3578775", "longitude"=>"-71.0933238"}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  app/controllers/items_controller.rb:51:in `block in create'
+  app/controllers/items_controller.rb:50:in `create'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.8ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:43:25 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.3ms)
+  Rendered items/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:43:25 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:43:32 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asdf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.3578768", "longitude"=>"-71.0933392", "address"=>"asdf"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 0ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: address):
+  app/controllers/items_controller.rb:48:in `new'
+  app/controllers/items_controller.rb:48:in `create'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.2ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:43:43 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (15.1ms)
+  Rendered items/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 31ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:43:44 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:43:51 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asd", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.3578757", "longitude"=>"-71.0933158", "address"=>"ads"}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (9.4ms)[0m  [1mINSERT INTO "items" ("address", "bought", "created_at", "description", "gmaps", "image", "latitude", "longitude", "name", "owner_id", "price", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "ads"], ["bought", 0], ["created_at", Thu, 23 May 2013 13:43:51 UTC +00:00], ["description", "asdf"], ["gmaps", true], ["image", nil], ["latitude", #<BigDecimal:7fe30adb2b18,'0.144606691E2',18(45)>], ["longitude", #<BigDecimal:7fe30adb2d48,'0.1210339708E3',18(45)>], ["name", "asd"], ["owner_id", nil], ["price", #<BigDecimal:7fe30adb2ff0,'0.344E1',18(18)>], ["status", nil], ["updated_at", Thu, 23 May 2013 13:43:51 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 196ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-05-23 09:43:51 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered items/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 09:43:54 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 09:44:07 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:44:07 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:44:10 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered items/map2.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:44:10 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:44:11 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.3ms)
+  Rendered items/map2.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:44:11 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:44:31 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered items/map2.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:44:31 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "image" varchar(255), "price" decimal, "bought" integer DEFAULT 0, "status" integer, "longitude" decimal, "latitude" decimal, "owner_id" varchar(255), "gmaps" varchar(255), "address" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar(255), "remember_token" varchar(255)) 
+  [1m[36m (1.1ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130523001314')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101024022957')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130522195718')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130522201714')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130522202948')[0m
+  [1m[35m (1.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.7ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePosts (20101024022957)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101024022957')[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateUsers (20130522195718)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130522195718')[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20130522201714)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130522201714')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to AddRememberTokenToUsers (20130522202948)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "remember_token" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130522202948')
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateItems (20130523001314)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "image" varchar(255), "price" decimal, "bought" integer DEFAULT 0, "status" integer, "longitude" float, "latitude" float, "owner_id" varchar(255), "gmaps" varchar(255), "address" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130523001314')
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:46:04 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered items/map2.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:46:04 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2013-05-23 09:46:10 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:46:10 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:46:11 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (3.0ms)
+  Rendered items/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 16ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:46:11 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:46:17 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.0ms)
+  Rendered items/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:46:17 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:46:21 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.8ms)
+  Rendered items/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:46:21 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:46:27 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asd", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357922599999995", "longitude"=>"-71.0932945", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (2.1ms)
+  Rendered items/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:46:33 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asd", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357922599999995", "longitude"=>"-71.0932945", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (1.8ms)
+  Rendered items/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:46:37 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asd", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357922599999995", "longitude"=>"-71.0932945", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (1.9ms)
+  Rendered items/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2013-05-23 09:46:41 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:46:41 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:46:44 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.4ms)
+  Rendered items/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:46:59 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.2ms)
+  Rendered items/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:46:59 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "image" varchar(255), "price" decimal, "bought" integer DEFAULT 0, "status" integer, "longitude" float, "latitude" float, "owner_id" varchar(255), "gmaps" varchar(255), "address" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar(255), "remember_token" varchar(255)) 
+  [1m[36m (0.7ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130523001314')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20101024022957')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130522195718')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130522201714')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130522202948')[0m
+  [1m[35m (1.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePosts (20101024022957)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101024022957')[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateUsers (20130522195718)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130522195718')[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20130522201714)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130522201714')[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to AddRememberTokenToUsers (20130522202948)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "remember_token" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130522202948')
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateItems (20130523001314)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "image" varchar(255), "price" decimal, "bought" integer DEFAULT 0, "status" integer, "longitude" float, "latitude" float, "owner_id" varchar(255), "gmaps" varchar(255), "address" varchar(255) DEFAULT '', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130523001314')
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:47:14 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.3ms)
+  Rendered items/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 18ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:47:15 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:47:20 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357886799999996", "longitude"=>"-71.093288", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (2.1ms)
+  Rendered items/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:47:23 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357886799999996", "longitude"=>"-71.093288", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (2.0ms)
+  Rendered items/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:47:36 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357886799999996", "longitude"=>"-71.093288", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (19.8ms)
+  Rendered items/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:47:38 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357886799999996", "longitude"=>"-71.093288", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (1.6ms)
+  Rendered items/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:47:39 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357886799999996", "longitude"=>"-71.093288", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (1.7ms)
+  Rendered items/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:47:41 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357886799999996", "longitude"=>"-71.093288", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (1.9ms)
+  Rendered items/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:47:42 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357886799999996", "longitude"=>"-71.093288", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (1.6ms)
+  Rendered items/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:47:43 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357886799999996", "longitude"=>"-71.093288", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (1.9ms)
+  Rendered items/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:47:45 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357886799999996", "longitude"=>"-71.093288", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (1.6ms)
+  Rendered items/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2013-05-23 09:48:01 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:48:02 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:48:04 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (5.4ms)
+  Rendered items/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:48:09 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.9ms)
+  Rendered items/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:48:09 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:48:17 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asdf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357880699999995", "longitude"=>"-71.0933187", "address"=>"asdf"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "items" ("address", "bought", "created_at", "description", "gmaps", "image", "latitude", "longitude", "name", "owner_id", "price", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "asdf"], ["bought", 0], ["created_at", Thu, 23 May 2013 13:48:17 UTC +00:00], ["description", "asdf"], ["gmaps", true], ["image", nil], ["latitude", 41.7044601], ["longitude", -93.6174977], ["name", "asdf"], ["owner_id", nil], ["price", #<BigDecimal:7fe30ad1c280,'0.344E1',18(18)>], ["status", nil], ["updated_at", Thu, 23 May 2013 13:48:17 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 70ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-05-23 09:48:17 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered items/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2013-05-23 09:48:28 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:48:28 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:48:30 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.1ms)
+  Rendered items/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:48:51 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.3ms)
+  Rendered items/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:48:51 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:48:58 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (3.1ms)
+  Rendered items/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:48:58 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:49:05 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.8ms)
+  Rendered items/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:49:05 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:49:11 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asdf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.357920299999996", "longitude"=>"-71.09330039999999", "address"=>"a"}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "items" ("address", "bought", "created_at", "description", "gmaps", "image", "latitude", "longitude", "name", "owner_id", "price", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "a"], ["bought", 0], ["created_at", Thu, 23 May 2013 13:49:11 UTC +00:00], ["description", "asdf"], ["gmaps", true], ["image", nil], ["latitude", 45.3101717], ["longitude", -89.01661349999999], ["name", "asdf"], ["owner_id", nil], ["price", #<BigDecimal:7fe30ad85960,'0.344E1',18(18)>], ["status", nil], ["updated_at", Thu, 23 May 2013 13:49:11 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/2
+Completed 302 Found in 130ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/items/2" for 127.0.0.1 at 2013-05-23 09:49:11 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered items/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 09:49:12 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 09:49:16 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:49:16 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:49:17 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.7ms)
+  Rendered items/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:49:23 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.0ms)
+  Rendered items/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:49:23 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:49:28 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asdf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.3579327", "longitude"=>"-71.0933104", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (1.8ms)
+  Rendered items/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:49:33 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asdf", "description"=>"asdf", "price"=>"3.44", "latitude"=>"42.3579327", "longitude"=>"-71.0933104", "address"=>""}, "commit"=>"Create"}
+  [1m[35m (0.0ms)[0m  begin transaction
+You must provide an address
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered items/_form.html.erb (2.6ms)
+  Rendered items/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2013-05-23 09:49:35 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:49:35 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:49:37 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.0ms)
+  Rendered items/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:49:41 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.8ms)
+  Rendered items/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:49:41 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2013-05-23 09:49:46 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJjhhHVHYDDJJjEIWdDsQnKgJTVFsOAfdET/JmHIGBM=", "item"=>{"name"=>"asd", "description"=>"asd", "price"=>"4.55", "latitude"=>"42.357926299999995", "longitude"=>"-71.0932785", "address"=>"a"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("address", "bought", "created_at", "description", "gmaps", "image", "latitude", "longitude", "name", "owner_id", "price", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "a"], ["bought", 0], ["created_at", Thu, 23 May 2013 13:49:46 UTC +00:00], ["description", "asd"], ["gmaps", true], ["image", nil], ["latitude", 45.3101717], ["longitude", -89.01661349999999], ["name", "asd"], ["owner_id", nil], ["price", #<BigDecimal:7fe30ad64f30,'0.455E1',18(18)>], ["status", nil], ["updated_at", Thu, 23 May 2013 13:49:46 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/3
+Completed 302 Found in 129ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/items/3" for 127.0.0.1 at 2013-05-23 09:49:46 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered items/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/market" for 127.0.0.1 at 2013-05-23 09:49:48 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:49:54 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered items/map2.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:49:54 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:49:54 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered items/map2.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:49:54 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:50:07 -0400
+Processing by ItemsController#map2 as HTML
+  Rendered items/map2.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:50:07 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:51:55 -0400
+Processing by ItemsController#map2 as HTML
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" 
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered items/map2.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 32ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:51:56 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:52:07 -0400
+Processing by ItemsController#map2 as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered items/map2.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:52:07 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:52:15 -0400
+Processing by ItemsController#map2 as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" 
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered items/map2.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:52:15 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:53:04 -0400
+Processing by ItemsController#map2 as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered items/map2.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:53:04 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2013-05-23 09:53:04 -0400
+Served asset /all.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/changey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/changey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/changey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:53:37 -0400
+Processing by ItemsController#map2 as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" 
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered items/map2.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:53:38 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-05-23 09:53:38 -0400
+Served asset /application.css - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/application.css"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/changey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/changey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/changey/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:54:05 -0400
+Processing by ItemsController#map2 as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" [0m
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered items/map2.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-05-23 09:54:05 -0400
+Compiled gmaps4rails.css  (0ms)  (pid 27523)
+Compiled home.css  (0ms)  (pid 27523)
+Compiled items.css  (0ms)  (pid 27523)
+Compiled scaffold.css  (0ms)  (pid 27523)
+Compiled sessions.css  (0ms)  (pid 27523)
+Compiled users.css  (0ms)  (pid 27523)
+Compiled application.css  (44ms)  (pid 27523)
+Served asset /application.css - 200 OK (57ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:54:05 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2013-05-23 09:54:11 -0400
+Processing by ItemsController#map2 as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" 
+  Rendered /Users/changey/.rvm/gems/ruby-1.9.3-p374/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered items/map2.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:54:11 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-05-23 09:54:11 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:54:55 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.4ms)
+  Rendered items/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-05-23 09:54:55 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:54:55 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:54:57 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.2ms)
+  Rendered items/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:54:58 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-05-23 09:54:58 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:54:59 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.8ms)
+  Rendered items/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-05-23 09:54:59 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:54:59 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:55:01 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.4ms)
+  Rendered items/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-05-23 09:55:01 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:55:01 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:55:03 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.5ms)
+  Rendered items/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:55:03 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-05-23 09:55:03 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:55:04 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.5ms)
+  Rendered items/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-05-23 09:55:04 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:55:04 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2013-05-23 09:55:13 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.6ms)
+  Rendered items/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-05-23 09:55:13 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-05-23 09:55:13 -0400
+Served asset /application.js - 304 Not Modified (0ms)

@@ -20,11 +20,13 @@ ActiveRecord::Schema.define(:version => 20130523001314) do
     t.decimal  "price"
     t.integer  "bought",      :default => 0
     t.integer  "status"
-    t.decimal  "lat"
-    t.decimal  "lng"
+    t.float    "longitude"
+    t.float    "latitude"
     t.string   "owner_id"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.string   "gmaps"
+    t.string   "address",     :default => ""
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "posts", :force => true do |t|

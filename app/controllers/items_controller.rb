@@ -3,11 +3,21 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
+    
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @items }
     end
+  end
+  
+  def map2
+    @json = Item.all.to_gmaps4rails
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @json }
+    end
+    
   end
 
   # GET /items/1
