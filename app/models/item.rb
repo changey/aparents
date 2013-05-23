@@ -7,10 +7,10 @@ class Item < ActiveRecord::Base
   
   def gmaps4rails_marker_picture
   {
-   "picture" => "/images/marker_blue.png",
-   "width" => 26,
-   "height" => 42,
-   "marker_anchor" => [ 26, 42],
+   "picture" => "/images/#{status}.png",
+   "width" => 27,
+   "height" => 43,
+   "marker_anchor" => [ 27, 43],
   }
 end
   

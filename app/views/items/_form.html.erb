@@ -7,8 +7,10 @@
 	<p>Price (USD)</p>
 	<%= f.text_field :price %>
 	<%= f.hidden_field :address, :value=>"a" %>
-	<%= f.text_field :latitude, :id => "lat", :precision=>10, :scale=>6 %>
-	<%= f.text_field :longitude, :id => "lng", :precision=>10, :scale=>6 %>
+	<%= f.text_field :latitude, :id => "lat" %>
+	<%= f.text_field :longitude, :id => "lng" %>
+	<p>status</p>
+	<%= f.text_field :status %>
 	
 	<%= f.submit "Create", "data-role" => "button", "data-inline" => "true", "data-theme" => "b" %>
 	<% end %>
