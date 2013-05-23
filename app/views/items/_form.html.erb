@@ -1,25 +1,14 @@
-<%= form_for(@item) do |f| %>
-  <% if @item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+<div id="container">
+	<div data-role="content" data-inset="true">
+		<%= form_for(@item) do |f| %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+		<%= f.submit "Create", "data-role" => "button", "data-inline" => "true", "data-theme" => "b" %>
+		<% end %>
 
-      <ul>
-      <% @item.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+	</div>
+</div>
+
+
