@@ -17,4 +17,5 @@ Jqmoblog::Application.routes.draw do
   match '/market', to: 'items#index'
   
   match '/location', to: 'home#location'
+  match '/map', to: 'items#map'
 end

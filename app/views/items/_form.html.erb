@@ -6,6 +6,9 @@
 	<%= f.text_area :description %>
 	<p>Price (USD)</p>
 	<%= f.text_field :price %>
+	<%= f.text_field :lat, :id => "lat" %>
+	<%= f.text_field :lng, :id => "lng" %>
+	
 	<%= f.submit "Create", "data-role" => "button", "data-inline" => "true", "data-theme" => "b" %>
 	<% end %>
 
