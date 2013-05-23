@@ -18,15 +18,15 @@ ActiveRecord::Schema.define(:version => 20130523001314) do
     t.string   "description"
     t.string   "image"
     t.decimal  "price"
-    t.integer  "bought",      :default => 0
+    t.integer  "bought",                                     :default => 0
     t.integer  "status"
-    t.float    "longitude"
-    t.float    "latitude"
+    t.decimal  "longitude",   :precision => 10, :scale => 6
+    t.decimal  "latitude",    :precision => 10, :scale => 6
     t.string   "owner_id"
     t.string   "gmaps"
-    t.string   "address",     :default => ""
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.string   "address"
+    t.datetime "created_at",                                                :null => false
+    t.datetime "updated_at",                                                :null => false
   end
 
   create_table "posts", :force => true do |t|

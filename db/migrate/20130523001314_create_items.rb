@@ -7,8 +7,8 @@ class CreateItems < ActiveRecord::Migration
       t.decimal :price, :scale => 2
       t.integer :bought, :default=>0
       t.integer :status
-      t.float :longitude
-      t.float :latitude
+      t.decimal :longitude
+      t.decimal :latitude
       t.string :owner_id
       t.string :gmaps
       t.string :address

@@ -28,17 +28,18 @@ function handle_errors(error) {
 
 function handle_geolocation_query(position) {
 	var image_url = "http://maps.google.com/maps/api/staticmap?sensor=false&center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=14&size=300x400&markers=color:blue|label:S|" + position.coords.latitude + ',' + position.coords.longitude;
-
+    
+    console.log(image_url);
 	if ($("#lat")[0]!=undefined){
      	$("#lat")[0].value=position.coords.latitude; 
     	$("#lng")[0].value=position.coords.longitude; 
 	}
-	$("#map").remove();
+	$("#map2").remove();
 	var container = document.getElementById("container");
 	var img = document.createElement("img");
 	img.src = image_url;
 
-	img.id = "map";
+	img.id = "map2";
 	container.appendChild(img);
 
 }
